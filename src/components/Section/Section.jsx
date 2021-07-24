@@ -1,7 +1,7 @@
 import { Wrapper, Title } from "./Section.styles";
 import PropTypes from 'prop-types';
 
-const Section = ({ children, title }) => {
+const Section = ({ children = <div></div>, title }) => {
   return (
     <Wrapper>
       <Title>{title}</Title>
@@ -12,7 +12,7 @@ const Section = ({ children, title }) => {
 
 Section.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 }
 
 export default Section;
